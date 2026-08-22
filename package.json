@@ -1,0 +1,27 @@
+{
+  "name": "@cozyvtt/agent",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Installed MCP transport plugin for CozyVTT",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "package:extension": "npm run build && node scripts/build-extension-package.mjs",
+    "test": "npm run build && node --test test/*.test.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "esbuild": "^0.28.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@cozyvtt/extension-sdk": "file:../CozyVTT/packages/extension-sdk",
+    "@modelcontextprotocol/sdk": "^1.30.0"
+  }
+}
