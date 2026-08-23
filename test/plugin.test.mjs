@@ -15,7 +15,6 @@ const capabilities = {
       approvalRequired: false,
       idempotencyRequired: true,
       openWorld: false,
-      operatingRoles: ["GM"],
     },
   ],
   dispatch: async (id, input, options) => ({ id, input, options }),

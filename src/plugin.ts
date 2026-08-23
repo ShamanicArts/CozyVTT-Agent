@@ -7,7 +7,7 @@ export const cozyVttAgentPlugin = defineExtension({
     manifestVersion: "1.0",
     id: "cozyvtt.agent",
     name: "CozyVTT Agent",
-    version: "0.2.0",
+    version: "0.2.1",
     description: "MCP transport adapter for scoped CozyVTT plugin capabilities.",
     compatibility: { extensionApi: "^1.0.0", cozyVtt: "^1.1.0" },
     capabilities: ["http-transports"],

@@ -14,7 +14,7 @@ export function createCozyVttAgentMcpServer(
   capabilities: CoreExtensionGateway,
 ): Server {
   const server = new Server(
-    { name: "cozyvtt-agent", version: "0.2.0" },
+    { name: "cozyvtt-agent", version: "0.2.1" },
     {
       capabilities: { tools: { listChanged: false } },
       instructions:
@@ -104,7 +104,7 @@ function commandTool(command: CoreCommandSummary): Tool {
   return {
     name: toolName("command", command.id),
     title: command.title,
-    description: `${command.description} Operating roles: ${command.operatingRoles.join(", ")}.`,
+    description: command.description,
     inputSchema: {
       type: "object",
       properties,
